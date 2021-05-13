@@ -89,6 +89,21 @@ const questions = [
         choices: ['GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'THe Unlicense', 'No License'],
         default: 6
     },
+    {
+        type: 'input',
+        name: 'gitHub',
+        message: 'What is you GitHub user name?'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is you email address?'
+    },
+    {
+        type: 'input',
+        name: 'contact',
+        message: 'How to contact you?'
+    }
 ];
 
 // TODO: Create a function to write README file
