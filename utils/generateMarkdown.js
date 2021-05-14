@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -18,24 +20,57 @@ function renderLicenseBadge(license) {
     default:
       return ('');
   };
-
-
-}
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch (license) {
     case 'GNU AGPLv3':
-      return ('');
+      fs.copyFile('./utils/LICENSE/GNUAGPLv3.txt', './finishedReadMe/LICENSE.txt', err => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log('added license.txt')
+      });
+      return ('[License](./LICENSE.txt)');
     case 'Mozilla Public License 2.0':
-      return ('');
+      fs.copyFile('./utils/LICENSE/MozillaPL2.0.txt', './finishedReadMe/LICENSE.txt', err => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log('added license.txt')
+      });
+      return ('[License](./LICENSE.txt)');
     case 'Apache License 2.0':
-      return ('');
+      fs.copyFile('./utils/LICENSE/ApacheL2.0.txt', './finishedReadMe/LICENSE.txt', err => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log('added license.txt')
+      });
+      return ('[License](./LICENSE.txt)');
     case 'MIT License':
-      return ('');
+      fs.copyFile('./utils/LICENSE/MITL.txt', './finishedReadMe/LICENSE.txt', err => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log('added license.txt')
+      });
+      return ('[License](./LICENSE.txt)');
     case 'The Unlicense':
-      return ('');
+      fs.copyFile('./utils/LICENSE/Theunlicense.txt', './finishedReadMe/LICENSE.txt', err => {
+        if (err) {
+          console.log(err);
+          return;
+        }
+        console.log('added license.txt')
+      });
+      return ('[License](./LICENSE.txt)');
     case 'No License':
       return ('');
     default:
@@ -48,17 +83,17 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   switch (license) {
     case 'GNU AGPLv3':
-      return ('');
+      return ('This work falls under the GNU AGPLv3 license');
     case 'Mozilla Public License 2.0':
-      return ('');
+      return ('This work falls under the Mozilla Public License 2.0');
     case 'Apache License 2.0':
-      return ('');
+      return ('This work falls under the Apache License 2.0');
     case 'MIT License':
-      return ('');
+      return ('This work falls under the MIT License');
     case 'The Unlicense':
-      return ('');
+      return ('This work falls under the The Unlicense');
     case 'No License':
-      return ('');
+      return ('This work falls under copyright and please contact the owner for permission to use.');
     default:
       return ('');
   };
@@ -102,15 +137,15 @@ function generateMarkdown(data) {
   ${data.test}
     
   ## License
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license)}  
   ${renderLicenseLink(data.license)}
     
   ## Questions?
-  ${data.contact}
-  <br>
-  ${data.gitHub}
-  <br>
-  ${data.email}
+  ${data.contact}  
+  
+  ${data.gitHub}  
+   
+  ${data.email}  
   
 `];
 }
