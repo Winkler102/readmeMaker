@@ -22,8 +22,8 @@
      1. Clone from repository  
      2. Open command prompt to folder  
      3. Run npm install.    
-     
-     <a href='https://youtu.be/4VQ2QT3zbM8'>Installtion Video</a> 
+    
+   ![Install Instruction Video](https://youtu.be/4VQ2QT3zbM8)
 
   
   ## Usage 
