@@ -23,7 +23,7 @@
      2. Open command prompt to folder  
      3. Run npm install.    
     
-   ![Install Instruction Video](https://youtu.be/4VQ2QT3zbM8)
+   [Install Instruction Video](https://youtu.be/4VQ2QT3zbM8)
 
   
   ## Usage 
