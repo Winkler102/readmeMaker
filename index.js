@@ -115,7 +115,7 @@ function writeToFile(fileName, data) {
             console.log(err)
             return;
         }
-        console.log('Made README!')
+        console.log('Made README! Please open to edit and make it your own.')
     });
 }
 
